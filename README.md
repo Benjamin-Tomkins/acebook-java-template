@@ -1,5 +1,5 @@
-## Acebook-Virtual-Angus
+# React Tutorial
 
-### Read all about our progress on this blog :
+## About
 
-https://benjamin-tomkins.github.io/acebook-virtual-angus/
+This is us (Dan and Rahul) working through the tutorial from [the react.js website](https://reactjs.org/tutorial/tutorial.html).
