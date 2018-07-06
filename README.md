@@ -5,11 +5,10 @@
 03. [x] [`thymeleaf`](#thymeleaf) to serve `index.html` <br>
 04. [ ] [`react`](#react) to make requests to the api and render the component views <br>
 05. [ ] [`flyway`](#flyway) to manage `postgres` db migrations <br>
-06. [ ] [`Rest Repositories`](#Rest-Repositories) to manage `postgres` db migrations <br>
-07. [ ] [`JPA`](#JPA) to manage `postgres` db migrations <br>
-08. [ ] [`H2`](#H2) to manage `postgres` db migrations <br>
-09. [ ] [`ReactJS`](#ReactJS) to manage `postgres` db migrations <br>
-10. [ ] [`Lombok`](#Lombok) to manage `postgres` db migrations <br>
+06. [ ] [`rest repositories`](#rest-repositories) to manage `postgres` db migrations <br>
+07. [ ] [`jpa`](#jpa) to manage `postgres` db migrations <br>
+08. [ ] [`h2`](#h2) to manage `postgres` db migrations <br>
+10. [ ] [`lombok`](#lombok) to manage `postgres` db migrations <br>
 
 
 Front End :
@@ -17,16 +16,14 @@ Backend / Server :
 Tool chain :
 
 
-### Maven
-
-
-### Webpack
-### Thymeleaf
-### React
-### Flyway
-### Rest Repositories
-### JPA
-### H2
+### maven
+### webpack
+### thymeleaf
+### react
+### rlyway
+### rest repositories
+### jpa
+### h2
 
 > H2 is a relational database management system written in Java.
 ```
@@ -73,5 +70,4 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
 ```
 
 
-### ReactJS
-### Lombok
+### lombok
