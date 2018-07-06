@@ -5,8 +5,8 @@
 03. [x] [`thymeleaf`](#thymeleaf) to serve `index.html` <br>
 04. [ ] [`react`](#react) to make requests to the api and render the component views <br>
 05. [ ] [`flyway`](#flyway) to manage `postgres` db migrations <br>
-06. [ ] [`Rest Repositories`](#Rest Repositories) to manage `postgres` db migrations <br>
-07. [ ] [`JPA`](#flyway) to manage `postgres` db migrations <br>
+06. [ ] [`Rest Repositories`](#Rest-Repositories) to manage `postgres` db migrations <br>
+07. [ ] [`JPA`](#JPA) to manage `postgres` db migrations <br>
 08. [ ] [`H2`](#H2) to manage `postgres` db migrations <br>
 09. [ ] [`ReactJS`](#ReactJS) to manage `postgres` db migrations <br>
 10. [ ] [`Lombok`](#Lombok) to manage `postgres` db migrations <br>
