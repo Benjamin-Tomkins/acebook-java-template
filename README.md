@@ -189,7 +189,7 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
 > curl is a command-line tool for transferring data using url syntax.
 ```
 + we are using curl to send json test data to a web service
-+ it supprts : HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP,
++ it supports : HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP,
                DICT, TELNET, FILE, IMAP, POP3, SMTP and RTSP
 ```
 
