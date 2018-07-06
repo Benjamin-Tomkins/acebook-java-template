@@ -108,7 +108,6 @@ To run the project with maven, add the following to the pom.xml file :
 > webpack is a static module bundler for modern JavaScript applications
 ```
 + it is being used to aggregate and transpile, with babel, the react ES6 code
-+ 
 ```
 
 From the project root : <br>
@@ -190,7 +189,8 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
 > curl is a command-line tool for transferring data using url syntax.
 ```
 + we are using curl to send json test data to a web service
-+ it supprts : HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP, DICT, TELNET, FILE, IMAP, POP3, SMTP and RTSP
++ it supprts : HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP,
+               DICT, TELNET, FILE, IMAP, POP3, SMTP and RTSP
 ```
 
 To see what’s on the server we use : <br>
