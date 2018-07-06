@@ -49,28 +49,27 @@ $.ajax({
 
 ### maven
 
-> maven (yiddish: *accumulator of knowledge*) is an automated build system
+> maven |yiddish: *accumulator of knowledge*| is an automated build system
 
 ```
 + maven allows a project to build using a project object model (pom.xml) configuration file.
 + it provides uniform and efficient build system for all team members.
 ```
-install maven : ```brew install maven```
+* Install : ```brew install maven```
+* Version : ```mvn --version```
+* Compile : ```mvn compile```
+* Build  : ```mvn package```
 
-check the version : ```mvn --version```
+If junit is listed as a dependency in the pom.xml
+* Run tests : ```mvn test```
 
-compile the project : ```mvn compile```
+To clean-up artifacts from by prior builds 
+* Clean-up : ```mvn clean```
 
-build the Project : ```mvn package```
-
-if junit is listed in the pom.xml : ```mvn test```
-
-to clean-up artifacts from by prior builds : ```mvn clean```
-
-run the compiled and packaged jar : ```java -jar target/acebook-template-1.0-SNAPSHOT.jar```
+run the compiled and packaged jar : ```java -jar target/acebook-template-1.0-SNAPSHOT.jar```<br>
 *note : this will fail if you haven’t set up your classpath.*
 
-to run the project with maven, add the following to the pom.xml file :
+To run the project with maven, add the following to the pom.xml file :
 ```
     <build>
         <plugins>
@@ -82,7 +81,7 @@ to run the project with maven, add the following to the pom.xml file :
     </build>
 ```
 
-you can now run the project with : ```mvn spring-boot:run```
+* You can now run the project with : ```mvn spring-boot:run```
 
 
 ### spring
