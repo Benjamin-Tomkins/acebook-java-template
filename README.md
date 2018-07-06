@@ -7,11 +7,14 @@
     ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝            ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   
 ```
 
-### [Tech notes from project 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
+### [Tech notes from 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
 
 
 <img src="./Acebook.svg">
 
+00. [x] [`spring`](#spring)
+00. [x] [`spring boot`](#spring-boot)
+00. [x] [`spring data`](#spring-data)
 01. [x] [`maven`](#maven) to build the project <br>
 02. [x] [`webpack`](#webpack) to bundle the javascript <br>
 03. [x] [`thymeleaf`](#thymeleaf) to serve `index.html` <br>
@@ -22,13 +25,91 @@
 08. [ ] [`h2`](#h2) to manage `postgres` db migrations <br>
 10. [ ] [`lombok`](#lombok) to manage `postgres` db migrations <br>
 
+: aspects of the engineering challenge :
 
+Tool chain :
 Front End :
 Backend / Server :
-Tool chain :
+Datastore : 
+
+curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"Whatever\"}" -H "Content-Type: application/json"
+
+
+whilst Tomcat is running.. open a browser to
+```localhost:8080```
+
+$.ajax({
+    url: "http://localhost:8080/api/posts",
+    type: "POST",
+    data: JSON.stringify({"content": "🦄🦄🦄"}),
+    contentType: "application/json",
+});
+
 
 
 ### maven
+
+> maven (yiddish: *accumulator of knowledge*) is an automated build system
+
+```
++ maven allows a project to build using its project object model (pom.xml) configuration files.
++ it provides uniform and efficient build system for all team members.
++ it has three sections –- general properties, dependencies, and the build itself.
+```
+install maven : ```brew install maven```
+
+check the version : ```mvn --version```
+
+compile the project : ```mvn compile```
+
+build the Project : ```mvn package```
+
+if junit is listed in the pom.xml : ```mvn test```
+
+to clean-up artifacts from by prior builds : ```mvn clean```
+
+run the compiled and packaged jar : ```java -jar target/acebook-template-1.0-SNAPSHOT.jar```
+*note : this will fail if you haven’t set up your classpath.*
+
+to run the project with maven, add the following to the pom.xml file :
+```
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+```
+
+you can now run the project with : ```mvn spring-boot:run```
+
+
+### spring
+```
++ *spring* is an application framework built on top of Java.
++ it allows for the building of decoupled systems using dependency injection.
+```
+
+### spring boot
+```
++ *spring boot* makes building *spring applications* simple -- requiring almost no configuration.
++ library versions are automatically resolved, and deployment is automated via maven or gradle.
++ Basically, it doubles down on Spring’s simplification of Java development.
+```
+
+### spring data
+```
++ *spring data* is *spring*’s helper library for data access.
++ it’s primary usage is the *spring data jpa*
++ it lets you connect to database engines conforming to the jpa standard.
+```
+
+
+
+
+
 ### webpack
 ### thymeleaf
 ### react
