@@ -59,7 +59,7 @@ Datastore :
 
 ### maven
 
-> maven |yiddish: *accumulator of knowledge*| is an automated build system
+> maven, yiddish: *accumulator of knowledge*, is an automated build system
 
 ```
 + maven allows a project to build using a project object model (pom.xml) configuration file.
