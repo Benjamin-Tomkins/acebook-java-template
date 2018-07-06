@@ -60,21 +60,20 @@ Datastore :
 ### maven
 
 > maven, yiddish: *accumulator of knowledge*, is an automated build system
-
 ```
 + maven allows a project to build using a project object model (pom.xml) configuration file.
 + it provides uniform and efficient build system for all team members.
 ```
-* Install : ```brew install maven```
-* Version : ```mvn --version```
-* Compile : ```mvn compile```
-* Build  : ```mvn package```
+> * Install : ```brew install maven```
+> * Version : ```mvn -v```
+> * Compile : ```mvn compile```
+> * Build  : ```mvn package```
 
 If junit is listed as a dependency in the pom.xml <br>
-* Run tests : ```mvn test```
+> * Run tests : ```mvn test```
 
 To clean-up artifacts from by prior builds <br>
-* Clean-up : ```mvn clean```
+> * Clean-up : ```mvn clean```
 
 run the compiled and packaged jar : ```java -jar target/acebook-template-1.0-SNAPSHOT.jar```<br>
 ( this will fail if you haven’t set up your classpath )
@@ -93,7 +92,7 @@ To run the project with maven, add the following to the pom.xml file :
 
 * You can now run the project with : ```mvn spring-boot:run```
 
-* whilst Tomcat is running, open a browser to : ```localhost:8080```
+* Whilst Tomcat is running, open a browser to : ```localhost:8080```
 
 
 ### webpack
