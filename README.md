@@ -193,12 +193,16 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
                DICT, TELNET, FILE, IMAP, POP3, SMTP and RTSP
 ```
 
-To see what’s on the server we use : <br>
-```curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"Whatever\"}" -H "Content-Type: application/json"```
+Pinging the root node with curl :
+```
++ We get back a collection of links wrapped up in a [HAL-formatted JSON document](http://stateless.co/hal_specification.html).
++ '_links' is a the collection of links available.
++ 'posts' points to an aggregate root for the post objects defined by the PostRepository interface.
++ 'profile' is an IANA-standard relation and points to discoverable metadata about the entire service.
+```
 
 When we call GET on the server, we can see there's a _link to the Post class in com.makersacademy.acebook.model
 (the convention is the name of the class with an s appended) i.e. the route will be 'posts'
- 
 
 ```curl localhost:8080/api``` <br>
 ```
