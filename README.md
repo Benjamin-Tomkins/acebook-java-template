@@ -24,6 +24,7 @@
 07. [ ] [`jpa`](#jpa) to manage `postgres` db migrations <br>
 08. [ ] [`h2`](#h2) to manage `postgres` db migrations <br>
 10. [ ] [`lombok`](#lombok) to manage `postgres` db migrations <br>
+11. [ ] [`cURL`](#cUrl) 
 
 : aspects of the engineering challenge :
 
@@ -50,6 +51,8 @@ Datastore :
 + Basically, it doubles down on Spring’s simplification of Java development.
 ```
 
+Maven build files for spring boot can be generated using the [spring initializer tool](http://start.spring.io)
+
 ### spring data
 ```
 + spring data is spring helper library for data access.
@@ -64,6 +67,7 @@ Datastore :
 + maven allows a project to build using a project object model (pom.xml) configuration file.
 + it provides uniform and efficient build system for all team members.
 ```
+
 * Install : ```brew install maven```
 * Version : ```mvn -v```
 * Compile : ```mvn compile```
@@ -94,6 +98,10 @@ To run the project with maven, add the following to the pom.xml file :
 
 * Whilst Tomcat is running, open a browser to : ```localhost:8080```
 
+```
++ Maven starts look for your code in src/main/java.
++ The application must be in a package, specified at the top of the Application.java file.
+```
 
 ### webpack
 
@@ -102,16 +110,23 @@ To run the project with maven, add the following to the pom.xml file :
 + it is being used to aggregate and transpile, with babel, the react ES6 code
 + 
 ```
+
 From the project root : <br>
 * Install node : ```brew install node```
 * Start the node package manage : ```npm init -y```
 * Install webpack : ```npm install --save-dev webpack```
 * Install webpack command line : ```npm install --save-dev webpack-cli```
 
-TODO -- Add more details to improve the react build process
+**TODO : Add more details to improve the react build process**
 
 ### thymeleaf
+
+
+
 ### react
+
+** TODO : RAHUL & DAN
+
 ### flyway
 ### rest repositories
 ### jpa
@@ -169,3 +184,18 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
 
 > Lombok is a java library that plugs into your editor and build tools
 > to generate getter and setter methods -- to keep your code cleaner
+
+### cURL
+
+> curl is a command-line tool for transferring data using url syntax.
+```
++ we are using curl to send json test data to a web service
++ it supprts : HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP, DICT, TELNET, FILE, IMAP, POP3, SMTP and RTSP
+```
+
+To see what’s on the server we use : <br>
+```curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"Whatever\"}" -H "Content-Type: application/json"```
+
+**TODO add information about using curl**
+
+
