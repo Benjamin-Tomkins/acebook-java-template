@@ -60,14 +60,14 @@ $.ajax({
 * Compile : ```mvn compile```
 * Build  : ```mvn package```
 
-If junit is listed as a dependency in the pom.xml
+If junit is listed as a dependency in the pom.xml <br>
 * Run tests : ```mvn test```
 
-To clean-up artifacts from by prior builds 
+To clean-up artifacts from by prior builds <br>
 * Clean-up : ```mvn clean```
 
 run the compiled and packaged jar : ```java -jar target/acebook-template-1.0-SNAPSHOT.jar```<br>
-*note : this will fail if you haven’t set up your classpath.*
+( this will fail if you haven’t set up your classpath )
 
 To run the project with maven, add the following to the pom.xml file :
 ```
@@ -86,21 +86,21 @@ To run the project with maven, add the following to the pom.xml file :
 
 ### spring
 ```
-+ *spring* is an application framework built on top of Java.
++ spring is an application framework built on top of Java.
 + it allows for the building of decoupled systems using dependency injection.
 ```
 
 ### spring boot
 ```
-+ *spring boot* makes building *spring applications* simple -- requiring almost no configuration.
++ spring boot makes building *spring applications* simple -- requiring almost no configuration.
 + library versions are automatically resolved, and deployment is automated via maven or gradle.
 + Basically, it doubles down on Spring’s simplification of Java development.
 ```
 
 ### spring data
 ```
-+ *spring data* is *spring*’s helper library for data access.
-+ it’s primary usage is the *spring data jpa*
++ spring data is spring helper library for data access.
++ it’s primary usage is the spring data jpa
 + it lets you connect to database engines conforming to the jpa standard.
 ```
 
