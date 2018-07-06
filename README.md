@@ -64,16 +64,16 @@ Datastore :
 + maven allows a project to build using a project object model (pom.xml) configuration file.
 + it provides uniform and efficient build system for all team members.
 ```
-> * Install : ```brew install maven```
-> * Version : ```mvn -v```
-> * Compile : ```mvn compile```
-> * Build  : ```mvn package```
+* Install : ```brew install maven```
+* Version : ```mvn -v```
+* Compile : ```mvn compile```
+* Build  : ```mvn package```
 
-If junit is listed as a dependency in the pom.xml <br>
-> * Run tests : ```mvn test```
+If junit is listed as a dependency in the pom.xml : <br>
+* Run tests : ```mvn test```
 
-To clean-up artifacts from by prior builds <br>
-> * Clean-up : ```mvn clean```
+To clean-up artifacts from by prior builds : <br>
+* Clean-up : ```mvn clean```
 
 run the compiled and packaged jar : ```java -jar target/acebook-template-1.0-SNAPSHOT.jar```<br>
 ( this will fail if you haven’t set up your classpath )
@@ -96,6 +96,20 @@ To run the project with maven, add the following to the pom.xml file :
 
 
 ### webpack
+
+> webpack is a static module bundler for modern JavaScript applications
+```
++ it is being used to aggregate and transpile, with babel, the react ES6 code
++ 
+```
+From the project root : <br>
+* Install node : ```brew install node```
+* Start the node package manage : ```npm init -y```
+* Install webpack : ```npm install --save-dev webpack```
+* Install webpack command line : ```npm install --save-dev webpack-cli```
+
+TODO -- Add more details to improve the react build process
+
 ### thymeleaf
 ### react
 ### flyway
