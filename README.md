@@ -1,4 +1,3 @@
-![Model](./Acebook.svg)
 <img src="./Acebook.svg">
 
 1. [x] [`maven`](#maven) to build the project <br>
