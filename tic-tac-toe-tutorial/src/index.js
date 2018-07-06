@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // I've inspected the starter code
+// I've installed the react dev tools and played with them
 
 class Square extends React.Component {
   constructor(props) {
