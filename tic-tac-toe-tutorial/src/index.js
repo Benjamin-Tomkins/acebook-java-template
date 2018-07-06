@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+// I've inspected the starter code
+
 class Square extends React.Component {
   render() {
     return (
@@ -65,4 +67,3 @@ ReactDOM.render(
   <Game />,
   document.getElementById('root')
 );
-
