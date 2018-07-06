@@ -1,3 +1,15 @@
+```
+███████╗██╗   ██╗██████╗ ███████╗██████╗     ███╗   ███╗ ██████╗  ██████╗       ██████╗ ██╗ ██████╗     ██████╗ ██████╗  ██████╗ ███████╗   
+██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗    ████╗ ████║██╔═══██╗██╔═══██╗      ██╔══██╗██║██╔═══██╗    ██╔══██╗██╔══██╗██╔═══██╗██╔════╝   
+███████╗██║   ██║██████╔╝█████╗  ██████╔╝    ██╔████╔██║██║   ██║██║   ██║█████╗██████╔╝██║██║   ██║    ██████╔╝██████╔╝██║   ██║███████╗   
+╚════██║██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗    ██║╚██╔╝██║██║   ██║██║   ██║╚════╝██╔══██╗██║██║   ██║    ██╔══██╗██╔══██╗██║   ██║╚════██║   
+███████║╚██████╔╝██║     ███████╗██║  ██║    ██║ ╚═╝ ██║╚██████╔╝╚██████╔╝      ██║  ██║██║╚██████╔╝    ██████╔╝██║  ██║╚██████╔╝███████║██╗
+╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝    ╚═╝     ╚═╝ ╚═════╝  ╚═════╝       ╚═╝  ╚═╝╚═╝ ╚═════╝     ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝
+```
+
+**PRESENTS .. BORING STUFF WITH JAVA!!**
+
+
 <img src="./Acebook.svg">
 
 01. [x] [`maven`](#maven) to build the project <br>
@@ -20,14 +32,17 @@ Tool chain :
 ### webpack
 ### thymeleaf
 ### react
-### rlyway
+### flyway
 ### rest repositories
 ### jpa
+
+
 ### h2
 
 > H2 is a relational database management system written in Java.
 ```
 + It can be embedded in Java applications or run in the client-server mode.
++ In-memory databases live only during the time of execution of the application.
 + H2 supports a sub set of the SQL standard.
 + H2 also provides a web console to maintain the database.
 ```
@@ -45,7 +60,6 @@ To enable the H2 console, add the following code to :
 
 ```
 spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
 ```
 Start the Application ;
 ```
@@ -68,6 +82,10 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
     <optional>true</optional>
 </dependency>
 ```
-
+<br>
+<br>
 
 ### lombok
+
+> Lombok is a java library that plugs into your editor and build tools
+> to generate getter and setter methods -- to keep your code cleaner
