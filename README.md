@@ -237,3 +237,29 @@ As we can see, "posts" is just an empty array []. <br>
 To inject a post into h2 datastore, we just have to use curl :
 
 ```curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"my first post\"}" -H "Content-Type: application/json"```
+
+```
+{
+  "_embedded" : {
+    "posts" : [ {
+      "content" : "Whatever",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/api/posts/1"
+        },
+        "post" : {
+          "href" : "http://localhost:8080/api/posts/1"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/api/posts"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/api/profile/posts"
+    }
+  }
+}
+```
