@@ -265,3 +265,5 @@ To inject a post into h2 datastore, we just have to use curl :
   }
 }
 ```
+
+curl'ing any of the 'self' canonical -links will show the data for that particular post.
