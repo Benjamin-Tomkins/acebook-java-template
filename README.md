@@ -37,7 +37,7 @@ curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"Whatever\"}" -H "Con
 
 whilst Tomcat is running.. open a browser to
 ```localhost:8080```
-
+```
 $.ajax({
     url: "http://localhost:8080/api/posts",
     type: "POST",
@@ -45,16 +45,15 @@ $.ajax({
     contentType: "application/json",
 });
 
-
+```
 
 ### maven
 
 > maven (yiddish: *accumulator of knowledge*) is an automated build system
 
 ```
-+ maven allows a project to build using its project object model (pom.xml) configuration files.
++ maven allows a project to build using a project object model (pom.xml) configuration file.
 + it provides uniform and efficient build system for all team members.
-+ it has three sections –- general properties, dependencies, and the build itself.
 ```
 install maven : ```brew install maven```
 
