@@ -196,6 +196,44 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
 To see what’s on the server we use : <br>
 ```curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"Whatever\"}" -H "Content-Type: application/json"```
 
-**TODO add information about using curl**
+When we call GET on the server, we can see there's a _link to the Post class in com.makersacademy.acebook.model
+(the convention is the name of the class with an s appended) i.e. the route will be 'posts'
+ 
 
+```curl localhost:8080/api``` <br>
+```
+{
+  "_links" : {
+    "posts" : {
+      "href" : "http://localhost:8080/api/posts"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/api/profile"
+    }
+  }
+}
+```
 
+To see what posts we just have to curl GET on the url.
+
+```curl localhost:8080/api/posts``` <br>
+```
+{
+  "_embedded" : {
+    "posts" : [ ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/api/posts"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/api/profile/posts"
+    }
+  }
+}
+```
+
+As we can see, "posts" is just an empty array []. <br>
+To inject a post into h2 datastore, we just have to use curl :
+
+```curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"my first post\"}" -H "Content-Type: application/json"```
