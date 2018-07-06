@@ -244,7 +244,7 @@ To inject a post into h2 datastore, we just have to use curl :
 {
   "_embedded" : {
     "posts" : [ {
-      "content" : "Whatever",
+      "content" : "my first post",
       "_links" : {
         "self" : {
           "href" : "http://localhost:8080/api/posts/1"
