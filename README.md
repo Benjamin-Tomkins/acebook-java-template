@@ -32,19 +32,29 @@ Front End :
 Backend / Server :
 Datastore : 
 
-curl -X POST "localhost:8080/api/posts" -d "{\"content\": \"Whatever\"}" -H "Content-Type: application/json"
 
 
-whilst Tomcat is running.. open a browser to
-```localhost:8080```
+
+
+
+### spring
 ```
-$.ajax({
-    url: "http://localhost:8080/api/posts",
-    type: "POST",
-    data: JSON.stringify({"content": "🦄🦄🦄"}),
-    contentType: "application/json",
-});
++ spring is an application framework built on top of Java.
++ it allows for the building of decoupled systems using dependency injection.
+```
 
+### spring boot
+```
++ spring boot makes building *spring applications* simple -- requiring almost no configuration.
++ library versions are automatically resolved, and deployment is automated via maven or gradle.
++ Basically, it doubles down on Spring’s simplification of Java development.
+```
+
+### spring data
+```
++ spring data is spring helper library for data access.
++ it’s primary usage is the spring data jpa
++ it lets you connect to database engines conforming to the jpa standard.
 ```
 
 ### maven
@@ -83,29 +93,7 @@ To run the project with maven, add the following to the pom.xml file :
 
 * You can now run the project with : ```mvn spring-boot:run```
 
-
-### spring
-```
-+ spring is an application framework built on top of Java.
-+ it allows for the building of decoupled systems using dependency injection.
-```
-
-### spring boot
-```
-+ spring boot makes building *spring applications* simple -- requiring almost no configuration.
-+ library versions are automatically resolved, and deployment is automated via maven or gradle.
-+ Basically, it doubles down on Spring’s simplification of Java development.
-```
-
-### spring data
-```
-+ spring data is spring helper library for data access.
-+ it’s primary usage is the spring data jpa
-+ it lets you connect to database engines conforming to the jpa standard.
-```
-
-
-
+* whilst Tomcat is running, open a browser to : ```localhost:8080```
 
 
 ### webpack
