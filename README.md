@@ -216,7 +216,7 @@ Pinging the root node with curl :
 }
 ```
 
-To see what posts we just have to curl GET on the url.
+To see any posts we have, curl GET on the url :
 
 ```curl localhost:8080/api/posts``` <br>
 ```
