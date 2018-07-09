@@ -5,9 +5,7 @@ class ToDoApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstToDoNote: "a",
-      secondToDoNote: "b",
-      thirdToDoNote: "c"
+      notes: ["note 1", "note 2", "note 3"]
     }
     this.handleClick = () => alert("Fuck off!");
   }
@@ -15,9 +13,9 @@ class ToDoApp extends React.Component {
   render() {
     return (
       <ul>
-        <ToDoNote value={this.state.firstToDoNote} onClick={this.handleClick} />
-        <ToDoNote value={this.state.secondToDoNote} onClick={this.handleClick} />
-        <ToDoNote value={this.state.thirdToDoNote} onClick={this.handleClick} />
+        <ToDoNote value={this.state.notes[0]} onClick={this.handleClick} />
+        <ToDoNote value={this.state.notes[1]} onClick={this.handleClick} />
+        <ToDoNote value={this.state.notes[2]} onClick={this.handleClick} />
       </ul>
     )
   }
