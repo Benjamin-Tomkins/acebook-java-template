@@ -8,16 +8,22 @@ class ToDoApp extends React.Component {
       notes: ["note 1", "note 2", "note 3"]
     }
     this.handleClick = () => alert("Fuck off!");
+    this.renderNote = (note, index) => {
+      return (
+        <ToDoNote
+          key={index}  value={note}
+          onClick={this.handleClick}
+        />
+      );
+    }
+    this.renderNotes = () => {
+      return this.state.notes
+        .map((note, index) => this.renderNote(note, index));
+      }
   }
 
   render() {
-    return (
-      <ul>
-        <ToDoNote value={this.state.notes[0]} onClick={this.handleClick} />
-        <ToDoNote value={this.state.notes[1]} onClick={this.handleClick} />
-        <ToDoNote value={this.state.notes[2]} onClick={this.handleClick} />
-      </ul>
-    )
+    return <ul>{this.renderNotes()}</ul>
   }
 }
 
