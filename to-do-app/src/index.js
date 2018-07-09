@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class NotesApp extends React.Component {
+class ToDoApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstNote: "a",
-      secondNote: "b",
-      thirdNote: "c"
+      firstToDoNote: "a",
+      secondToDoNote: "b",
+      thirdToDoNote: "c"
     }
     this.handleClick = () => alert("Fuck off!");
   }
@@ -15,18 +15,18 @@ class NotesApp extends React.Component {
   render() {
     return (
       <ul>
-        <Note value={this.state.firstNote} onClick={this.handleClick} />
-        <Note value={this.state.secondNote} onClick={this.handleClick} />
-        <Note value={this.state.thirdNote} onClick={this.handleClick} />
+        <ToDoNote value={this.state.firstToDoNote} onClick={this.handleClick} />
+        <ToDoNote value={this.state.secondToDoNote} onClick={this.handleClick} />
+        <ToDoNote value={this.state.thirdToDoNote} onClick={this.handleClick} />
       </ul>
     )
   }
 }
 
-class Note extends React.Component {
+class ToDoNote extends React.Component {
   render() {
     return <li onClick={this.props.onClick}> {this.props.value} </li>
   }
 }
 
-ReactDOM.render(<NotesApp />, document.getElementById('root'));
+ReactDOM.render(<ToDoApp />, document.getElementById('root'));
