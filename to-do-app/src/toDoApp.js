@@ -7,11 +7,13 @@ class ToDoApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      notes: ["note 1", "note 2", "note 3"],
+      notes: [],
       newNote: '',
       detailedView: "no note selected"
     }
-    this.handleClickOnNote = () => alert("Fuck off!");
+    this.handleClickOnNote = (event) => {
+      this.setState({detailedView: event.target.getAttribute('value')})
+    };
     this.handleChangeOfTextbox = (event) => {
       this.setState({newNote: event.target.value});
     }
