@@ -7,15 +7,14 @@ class ToDoApp extends React.Component {
     super(props);
     this.state = {
       notes: ["note 1", "note 2", "note 3"],
-      newNote: 22
+      newNote: ''
     }
     this.handleClickOnNote = () => alert("Fuck off!");
     this.handleChangeOfTextbox = (event) => {
-      event.preventDefault();
       this.setState({newNote: event.target.value});
     }
     this.handleClickCreateButton = () => {
-      alert(this.state.newNote);
+      this.setState({notes: this.state.notes.concat(this.state.newNote)});
       this.setState({newNote: ''});
     }
     this.renderNote = (note, index) => {
@@ -30,6 +29,7 @@ class ToDoApp extends React.Component {
   render() {
     return (
       <div>
+        <h1>Rahul's Primitive Notes App</h1>
         <InputForm value={this.state.newNote} handleChange={this.handleChangeOfTextbox} handleClick={this.handleClickCreateButton} />
         <ul>{this.renderNotes()}</ul>
       </div>
