@@ -1,6 +1,7 @@
 import React from 'react';
 import ToDoNote from './toDoNote';
 import InputForm from './inputForm';
+import DetailedView from './detailedView';
 
 class ToDoApp extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class ToDoApp extends React.Component {
         <h1>Rahul's Primitive Notes App</h1>
         <InputForm value={this.state.newNote} handleChange={this.handleChangeOfTextbox} handleClick={this.handleClickCreateButton} />
         <h2>Detailed View of Selected Note</h2>
-        <p>no note selected</p>
+        <DetailedView />
         <h2>Your Notes</h2>
         <ul>{this.renderNotes()}</ul>
       </div>
