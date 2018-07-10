@@ -19,7 +19,7 @@ class ToDoApp extends React.Component {
       this.setState({newNote: ''});
     }
     this.renderNote = (note, index) => {
-      return <ToDoNote key={index} value={note} onClick={this.handleClickOnNote} />
+      return <ToDoNote key={index} value={note} handleClick={this.handleClickOnNote} />
     }
     this.renderNotes = () => {
       return this.state.notes
