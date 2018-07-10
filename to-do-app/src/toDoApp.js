@@ -8,7 +8,8 @@ class ToDoApp extends React.Component {
     super(props);
     this.state = {
       notes: ["note 1", "note 2", "note 3"],
-      newNote: ''
+      newNote: '',
+      detailedView: "no note selected"
     }
     this.handleClickOnNote = () => alert("Fuck off!");
     this.handleChangeOfTextbox = (event) => {
@@ -33,7 +34,7 @@ class ToDoApp extends React.Component {
         <h1>Rahul's Primitive Notes App</h1>
         <InputForm value={this.state.newNote} handleChange={this.handleChangeOfTextbox} handleClick={this.handleClickCreateButton} />
         <h2>Detailed View of Selected Note</h2>
-        <DetailedView />
+        <DetailedView value={this.state.detailedView}/>
         <h2>Your Notes</h2>
         <ul>{this.renderNotes()}</ul>
       </div>

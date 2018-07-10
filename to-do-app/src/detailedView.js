@@ -2,7 +2,7 @@ import React from 'react';
 
 class DetailedView extends React.Component {
   render() {
-    return <p> Hi, I exist! </p>
+    return <p> {this.props.value} </p>
   }
 }
 
