@@ -31,6 +31,9 @@ class ToDoApp extends React.Component {
       <div>
         <h1>Rahul's Primitive Notes App</h1>
         <InputForm value={this.state.newNote} handleChange={this.handleChangeOfTextbox} handleClick={this.handleClickCreateButton} />
+        <h2>Detailed View of Selected Note</h2>
+        <p>no note selected</p>
+        <h2>Your Notes</h2>
         <ul>{this.renderNotes()}</ul>
       </div>
     )
