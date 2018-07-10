@@ -9,19 +9,17 @@ class ToDoApp extends React.Component {
       notes: ["note 1", "note 2", "note 3"],
       newNote: 22
     }
-    this.noteHandleClick = () => alert("Fuck off!");
-    this.newNoteHandleChange = (event) => {
+    this.handleClickOnNote = () => alert("Fuck off!");
+    this.handleChangeOfTextbox = (event) => {
       event.preventDefault();
       this.setState({newNote: event.target.value});
-      this.forceUpdate();
     }
-    this.handleCreateNote = () => {
+    this.handleClickCreateButton = () => {
       alert(this.state.newNote);
       this.setState({newNote: ''});
-      this.forceUpdate();
     }
     this.renderNote = (note, index) => {
-      return <ToDoNote key={index} value={note} onClick={this.noteHandleClick} />
+      return <ToDoNote key={index} value={note} onClick={this.handleClickOnNote} />
     }
     this.renderNotes = () => {
       return this.state.notes
@@ -32,7 +30,7 @@ class ToDoApp extends React.Component {
   render() {
     return (
       <div>
-        <InputForm value={this.state.newNote} changeHandler={this.newNoteHandleChange} clickHandler={this.handleCreateNote} />
+        <InputForm value={this.state.newNote} handleChange={this.handleChangeOfTextbox} handleClick={this.handleClickCreateButton} />
         <ul>{this.renderNotes()}</ul>
       </div>
     )
