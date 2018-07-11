@@ -16,6 +16,29 @@ class Posts extends React.Component {
   }
 }
 
+class InputForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {textboxText: ''};
+    this.textboxHandleChange = (event) => {
+      this.setState({textboxText: event.target.value});
+    };
+    this.postButtonHandleClick = (event) => {
+      alert(`Your post "${this.state.textboxText}" has been made.`);
+      this.setState({textboxText: ''});
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="text" value={this.state.textboxText} onChange={this.textboxHandleChange}/>
+        <input type="submit" onClick={this.postButtonHandleClick} />
+      </div>
+    )
+  }
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +59,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <Posts names={this.state.posts} />
+    return (
+     <div>
+       <InputForm />
+       <Posts names={this.state.posts} />
+     </div>
+    )
   }
 }
 
