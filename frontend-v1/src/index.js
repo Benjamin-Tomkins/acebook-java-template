@@ -24,7 +24,7 @@ class InputForm extends React.Component {
       this.setState({textboxText: event.target.value});
     };
     this.postButtonHandleClick = (event) => {
-      alert(`Your post "${this.state.textboxText}" has been made.`);
+      this.props.postFunction(this.state.textboxText);
       this.setState({textboxText: ''});
     };
   }
@@ -45,23 +45,29 @@ class App extends React.Component {
     this.domain = 'https://chitter-backend-api.herokuapp.com';
     this.port = '443';
     this.state = {posts: []};
+    this.refreshPosts = () => {
+      $.get(`${this.domain}:${this.port}/users`)
+        .then(rawResponse => rawResponse.data)
+        .then(people => {
+          return people.map(person => person.handle);
+        })
+        .then(peopleNames => {
+          this.setState({posts: peopleNames});
+        });
+    };
+    this.makePost = (postText) => {
+      alert(`Your post "${postText}" has been made.`);
+    }
   }
 
   componentDidMount() {
-    $.get(`${this.domain}:${this.port}/users`)
-      .then(rawResponse => rawResponse.data)
-      .then(people => {
-        return people.map(person => person.handle);
-      })
-      .then(peopleNames => {
-        this.setState({posts: peopleNames});
-      });
+    this.refreshPosts();
   }
 
   render() {
     return (
      <div>
-       <InputForm />
+       <InputForm postFunction={this.makePost} />
        <Posts names={this.state.posts} />
      </div>
     )
