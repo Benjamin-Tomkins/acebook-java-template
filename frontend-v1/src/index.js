@@ -46,6 +46,7 @@ class App extends React.Component {
     this.port = '443';
     this.state = {posts: []};
     this.refreshPosts = () => {
+      // $.get(`${this.domain}`:`${this.port}/users/99999999/posts/`)
       $.get(`${this.domain}:${this.port}/users`)
         .then(rawResponse => rawResponse.data)
         .then(people => {
@@ -56,7 +57,9 @@ class App extends React.Component {
         });
     };
     this.makePost = (postText) => {
+      // $.post(`${this.domain}`:`${this.port}/users/99999999/posts/`, JSON.stringify(postText));
       alert(`Your post "${postText}" has been made.`);
+      this.forceUpdate();
     }
   }
 
