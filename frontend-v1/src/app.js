@@ -11,6 +11,11 @@ class App extends React.Component {
     this.state = {posts: []};
     this.refreshPosts = () => {
       // $.get(`${this.domain}`:`${this.port}/users/99999999/posts/`)
+      //   .then(rawResponse => rawResponse.data)
+      //   .then(posts => posts.map(post => post.post_text))
+      //   .then(postStrings => {
+      //     this.setState({posts: postStrings})
+      //   });
       $.get(`${this.domain}:${this.port}/users`)
         .then(rawResponse => rawResponse.data)
         .then(people => {
