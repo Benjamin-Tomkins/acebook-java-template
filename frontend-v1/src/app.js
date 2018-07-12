@@ -12,6 +12,7 @@ class App extends React.Component {
     this.domain = 'http://192.168.48.230';
     this.port = '3000';
     this.user_id = '1001';
+    this.postToDelete = null;
     this.state = {posts: []};
     this.refreshPosts = () => {
       $.get(`${this.domain}:${this.port}/users/${this.user_id}/posts/`)
@@ -30,6 +31,14 @@ class App extends React.Component {
           this.refreshPosts()
         });
     }
+    this.deletePost = (postID) => {
+      alert("I have been clicked!");
+      $.delete(`${this.domain}:${this.port}/users/${this.user_id}/posts/${postID}`)
+        .then(() => {
+          alert(`Your post has been deleted! Be happy!`);
+          this.refreshPosts();
+        });
+    }
   }
 
   componentDidMount() {
@@ -41,7 +50,7 @@ class App extends React.Component {
      <div>
        <h1>Virtual Angus</h1>
        <InputForm postFunction={this.makePost} />
-       <Posts postsArray={this.state.posts} />
+       <Posts postsArray={this.state.posts} deleteButtonHandleClick={this.deletePost} postToDelete={this.postToDelete}/>
      </div>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react';
 
 class DeleteButton extends React.Component {
   render() {
-    <input type="button" onClick={this.props.deleteButtonClickHandler} />
+    return <input type="button" onClick={this.props.deleteButtonHandleClick} />
   }
 }
 
