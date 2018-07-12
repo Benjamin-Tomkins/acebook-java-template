@@ -9,7 +9,7 @@ import Post from './post';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.domain = 'http://192.168.48.230';
+    this.domain = 'http://192.168.48.140';
     this.port = '3000';
     this.user_id = '1001';
     this.postToDelete = null;
@@ -18,7 +18,7 @@ class App extends React.Component {
       $.get(`${this.domain}:${this.port}/users/${this.user_id}/posts/`)
         .then(rawResponse => rawResponse.data)
         .then(postJSONs => postJSONs.map(postJSON => {
-          return new Post(postJSON.id, postJSON.post_text)
+          return new Post(postJSON.id, postJSON.post_text, postJSON.created)
         }))
         .then(postObjects => {
           this.setState({posts: postObjects})

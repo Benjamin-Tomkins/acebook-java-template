@@ -5,7 +5,13 @@ class Posts extends React.Component {
     super(props)
     this.renderPosts = () => {
       return this.props.postsArray.reverse().map((post) => {
-        return <li key={post.id}>{post.post_text}/></li>
+        return (
+          <li key={post.id}>
+            <p>{post.post_text}</p>
+            <p>created at: {post.created}</p>
+            <p>post id: {post.id}</p>
+          </li>
+        )
       });
     }
   }
