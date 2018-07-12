@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'axios';
 import InputForm from './inputForm';
 import Posts from './posts';
+import Post from './post';
 
 // $.defaults.headers.post['Content-Type'] = 'application/json';
 
@@ -15,19 +16,13 @@ class App extends React.Component {
     this.refreshPosts = () => {
       $.get(`${this.domain}:${this.port}/users/${this.user_id}/posts/`)
         .then(rawResponse => rawResponse.data)
-        .then(posts => posts.map(post => post.post_text))
-        .then(postStrings => {
-          this.setState({posts: postStrings})
-        });
-      // $.get(`${this.domain}:${this.port}/users`)
-      //   .then(rawResponse => rawResponse.data)
-      //   .then(people => {
-      //     return people.map(person => person.handle);
-      //   })
-      //   .then(peopleNames => {
-      //     this.setState({posts: peopleNames});
-      //   });
-    };
+        .then(postJSONs => postJSONs.map(postJSON => {
+          return new Post(postJSON.id, postJSON.post_text)
+        }))
+        .then(postObjects => {
+          this.setState({posts: postObjects})
+        })
+    }
     this.makePost = (postText) => {
       $.post(`${this.domain}:${this.port}/users/${this.user_id}/posts/`, {"post_text": postText}, {headers: {'Content-Type': 'application/json'}})
         .then(() => {
@@ -44,8 +39,9 @@ class App extends React.Component {
   render() {
     return (
      <div>
+       <h1>Virtual Angus</h1>
        <InputForm postFunction={this.makePost} />
-       <Posts names={this.state.posts} />
+       <Posts postsArray={this.state.posts} />
      </div>
     )
   }
