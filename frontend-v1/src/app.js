@@ -8,7 +8,7 @@ import Posts from './posts';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.domain = 'http://192.168.48.112';
+    this.domain = 'http://192.168.48.230';
     this.port = '3000';
     this.user_id = '1001';
     this.state = {posts: []};
@@ -29,11 +29,11 @@ class App extends React.Component {
       //   });
     };
     this.makePost = (postText) => {
-      console.log(postText);
-      console.log(this.user_id);
-      $.post(`${this.domain}:${this.port}/users/${this.user_id}/posts/`, {"post_text": postText}, {headers: {'Content-Type': 'applications/json'}});
-      alert(`Your post "${postText}" has been made.`);
-      this.forceUpdate();
+      $.post(`${this.domain}:${this.port}/users/${this.user_id}/posts/`, {"post_text": postText}, {headers: {'Content-Type': 'application/json'}})
+        .then(() => {
+          alert(`Your post "${postText}" has been made.`);
+          this.refreshPosts()
+        });
     }
   }
 
