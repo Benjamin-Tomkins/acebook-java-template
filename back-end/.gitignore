@@ -1,13 +1,3 @@
-/target
-.idea/
-/node_modules
-/front-end/node_modules
-/back-end/node_modules
-dependency-reduced-pom.xml
-*.iml
-.log
-/src/main/resources/static/built
-
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
