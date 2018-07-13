@@ -1,4 +1,4 @@
-## [Tech notes from 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
+# [Tech notes from 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
 
 [`spring`](#spring) <br>
 [`spring boot`](#spring-boot) <br>
