@@ -1,4 +1,4 @@
-### [Tech notes from 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
+## [Tech notes from 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
 
 [`spring`](#spring) <br>
 [`spring boot`](#spring-boot) <br>
@@ -7,7 +7,7 @@
 [`webpack`](#webpack) <br>
 [`react`](#react) <br>
 [`h2`](#h2) <br>
-[`curl`](#curl) 
+[`curl`](#curl)
 
 :: aspects of the engineering challenge ::
 
@@ -95,7 +95,39 @@ From the project root : <br>
 
 ### react
 
-** TODO : RAHUL & DAN
+React is a front-end framework that makes writing dynamic with many components more manageable and scalable than with pure javascript.
+
+You as a developer will manipulate a "virtual DOM", each component of which is re-rendered into real HTML/CSS by the react framework whenever the component changes.
+
+It is easier to keep an overview in React because every component is in charge of its own event handlers. These event handlers can then be passed to the listening object as an argument (called prop).
+
+Here is a minimal example of some text that changes on a button click:
+
+```
+class Text extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: 'hello'};
+    this.handleClick = () => {
+      this.setState({text: 'goodbye'});
+    }
+  }
+  render() {
+    return (
+      <div>
+        {this.state.text}
+        <TextChangerButton onClick={this.handleClick} />
+      </div>
+    )
+  }
+}
+
+class TextChangerButton extends React.Component {
+  render() {
+    return <input type="button" onClick={this.props.handleClick} />
+  }
+}
+```
 
 ### h2
 
