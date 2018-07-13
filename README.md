@@ -1,41 +1,15 @@
-```
-    ███████╗██████╗ ██████╗ ██╗███╗   ██╗ ██████╗            ██████╗ ███████╗ █████╗  ██████╗████████╗
-    ██╔════╝██╔══██╗██╔══██╗██║████╗  ██║██╔════╝     ██╗    ██╔══██╗██╔════╝██╔══██╗██╔════╝╚══██╔══╝
-    ███████╗██████╔╝██████╔╝██║██╔██╗ ██║██║  ███╗    ╚═╝    ██████╔╝█████╗  ███████║██║        ██║   
-    ╚════██║██╔═══╝ ██╔══██╗██║██║╚██╗██║██║   ██║    ██╗    ██╔══██╗██╔══╝  ██╔══██║██║        ██║   
-    ███████║██║     ██║  ██║██║██║ ╚████║╚██████╔╝    ╚═╝    ██║  ██║███████╗██║  ██║╚██████╗   ██║   
-    ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝            ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   
-```
-
 ### [Tech notes from 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
 
+[`spring`](#spring) <br>
+[`spring boot`](#spring-boot) <br>
+[`spring data`](#spring-data) <br>
+[`maven`](#maven) <br>
+[`webpack`](#webpack) <br>
+[`react`](#react) <br>
+[`h2`](#h2) <br>
+[`curl`](#curl) 
 
-<img src="./Acebook.svg">
-
-00. [x] [`spring`](#spring)
-00. [x] [`spring boot`](#spring-boot)
-00. [x] [`spring data`](#spring-data)
-01. [x] [`maven`](#maven) to build the project <br>
-02. [x] [`webpack`](#webpack) to bundle the javascript <br>
-03. [x] [`thymeleaf`](#thymeleaf) to serve `index.html` <br>
-04. [ ] [`react`](#react) to make requests to the api and render the component views <br>
-05. [ ] [`flyway`](#flyway) to manage `postgres` db migrations <br>
-06. [ ] [`rest repositories`](#rest-repositories) to manage `postgres` db migrations <br>
-07. [ ] [`jpa`](#jpa) to manage `postgres` db migrations <br>
-08. [ ] [`h2`](#h2) to manage `postgres` db migrations <br>
-10. [ ] [`lombok`](#lombok) to manage `postgres` db migrations <br>
-11. [ ] [`cURL`](#cUrl) 
-
-: aspects of the engineering challenge :
-
-Tool chain :
-Front End :
-Backend / Server :
-Datastore : 
-
-
-
-
+:: aspects of the engineering challenge ::
 
 
 ### spring
@@ -118,18 +92,10 @@ From the project root : <br>
 
 **TODO : Add more details to improve the react build process**
 
-### thymeleaf
-
-
 
 ### react
 
 ** TODO : RAHUL & DAN
-
-### flyway
-### rest repositories
-### jpa
-
 
 ### h2
 
@@ -177,12 +143,6 @@ Addendum : The above steps are not necessary if you are using the [Spring Boot D
 </dependency>
 ```
 <br>
-<br>
-
-### lombok
-
-> Lombok is a java library that plugs into your editor and build tools
-> to generate getter and setter methods -- to keep your code cleaner
 
 ### cURL
 
