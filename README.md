@@ -1,4 +1,4 @@
-# [Tech notes from 'Virtual-Angus'](https://github.com/Benjamin-Tomkins/acebook-virtual-angus)
+# Tech Notes Wiki for Acebook Virtual Angus Project v.0.0.333557
 
 [`spring`](#spring) <br>
 [`spring boot`](#spring-boot) <br>
@@ -10,6 +10,8 @@
 [`curl`](#curl)
 
 :: aspects of the engineering challenge ::
+
+The main project is accessible on [github](https://github.com/Benjamin-Tomkins/acebook-virtual-angus).
 
 
 ### spring
