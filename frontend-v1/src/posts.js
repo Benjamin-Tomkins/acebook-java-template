@@ -8,7 +8,7 @@ class Posts extends React.Component {
         return (
           <li key={post.id}>
             <p>{post.post_text}</p>
-            <p>created at: {post.created}</p>
+            <p>Time created in ms since 1st Jan, 1970: {Date.parse(post.created)}</p>
             <p>post id: {post.id}</p>
           </li>
         )

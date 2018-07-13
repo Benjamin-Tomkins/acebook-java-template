@@ -1,15 +1,14 @@
 import React from 'react';
 import $ from 'axios';
-import InputForm from './inputForm';
+import PostForm from './postForm';
+import DeleteForm from './deleteForm';
 import Posts from './posts';
 import Post from './post';
-
-// $.defaults.headers.post['Content-Type'] = 'application/json';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.domain = 'http://192.168.48.140';
+    this.domain = 'http://192.168.48.135';
     this.port = '3000';
     this.user_id = '1001';
     this.postToDelete = null;
@@ -31,13 +30,15 @@ class App extends React.Component {
           this.refreshPosts()
         });
     }
-    this.deletePost = (postID) => {
-      alert("I have been clicked!");
-      $.delete(`${this.domain}:${this.port}/users/${this.user_id}/posts/${postID}`)
-        .then(() => {
-          alert(`Your post has been deleted! Be happy!`);
-          this.refreshPosts();
-        });
+    this.deletePost = (postIdToDelete) => {
+      let postIDs = this.state.posts.map(post => post.id.toString());
+      if (postIDs.includes(postIdToDelete)) {
+        $.delete(`${this.domain}:${this.port}/users/${this.user_id}/posts/${postIdToDelete}`, {headers: {"Content-Type": "application/json"}})
+          .then(() => {
+            alert(`Your post has been deleted! Be happy!`);
+            this.refreshPosts();
+          });
+      }
     }
   }
 
@@ -49,8 +50,9 @@ class App extends React.Component {
     return (
      <div>
        <h1>Virtual Angus</h1>
-       <InputForm postFunction={this.makePost} />
-       <Posts postsArray={this.state.posts} deleteButtonHandleClick={this.deletePost} postToDelete={this.postToDelete}/>
+       <PostForm postFunction={this.makePost} />
+       <DeleteForm deleteFunction={this.deletePost} />
+       <Posts postsArray={this.state.posts}/>
      </div>
     )
   }

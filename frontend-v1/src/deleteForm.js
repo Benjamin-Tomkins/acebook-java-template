@@ -1,14 +1,14 @@
 import React from 'react';
 
-class InputForm extends React.Component {
+class DeleteForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {textboxText: ''};
     this.textboxHandleChange = (event) => {
       this.setState({textboxText: event.target.value});
     };
-    this.postButtonHandleClick = (event) => {
-      this.props.postFunction(this.state.textboxText);
+    this.deleteButtonHandleClick = (event) => {
+      this.props.deleteFunction(this.state.textboxText);
       this.setState({textboxText: ''});
     };
   }
@@ -17,10 +17,10 @@ class InputForm extends React.Component {
     return (
       <div>
         <input type="text" value={this.state.textboxText} onChange={this.textboxHandleChange}/>
-        <input type="submit" onClick={this.postButtonHandleClick} />
+        <input type="submit" value="Delete Post By ID" onClick={this.deleteButtonHandleClick} />
       </div>
     )
   }
 }
 
-export default InputForm;
+export default DeleteForm;
