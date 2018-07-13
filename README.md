@@ -43,7 +43,7 @@ https://trello.com/b/JD91olmw/acebook-virtual-angus
 http:// <DOMAIN> :3000/
 ```
 
-The project consists of a custom JPA JSON Controller, with HATEOAS 
+The project consists of a custom JPA JSON Controller, with HATEOAS
 (Hypermedia as the Engine of Application State) support and custom HTTP error handling..
 and an locationally independent REACT front-end, single page application interface.
 
@@ -83,3 +83,9 @@ Following are the annotations used by the controller:
 ```
 
 ## Project Setup
+
+**front-end**
+
+* `cd front-end`
+* `npm install`
+* `npm start` - this should open a new browser window, running the application
